@@ -1,0 +1,2 @@
+/home/zoutianjian/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20250730/riscv32-esp-elf/bin/riscv32-esp-elf-ar qc libBME68x_SensorAPI.a CMakeFiles/__idf_BME68x_SensorAPI.dir/bme68x.c.obj CMakeFiles/__idf_BME68x_SensorAPI.dir/examples/common/common.c.obj
+/home/zoutianjian/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20250730/riscv32-esp-elf/bin/riscv32-esp-elf-ranlib libBME68x_SensorAPI.a

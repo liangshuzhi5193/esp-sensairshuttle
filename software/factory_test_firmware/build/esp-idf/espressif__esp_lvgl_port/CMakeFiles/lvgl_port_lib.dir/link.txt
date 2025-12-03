@@ -1,0 +1,2 @@
+/home/zoutianjian/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20250730/riscv32-esp-elf/bin/riscv32-esp-elf-ar qc liblvgl_port_lib.a CMakeFiles/lvgl_port_lib.dir/src/lvgl9/esp_lvgl_port.c.obj CMakeFiles/lvgl_port_lib.dir/src/lvgl9/esp_lvgl_port_disp.c.obj CMakeFiles/lvgl_port_lib.dir/src/lvgl9/esp_lvgl_port_button.c.obj CMakeFiles/lvgl_port_lib.dir/src/lvgl9/esp_lvgl_port_touch.c.obj
+/home/zoutianjian/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20250730/riscv32-esp-elf/bin/riscv32-esp-elf-ranlib liblvgl_port_lib.a

@@ -1,0 +1,2 @@
+source /home/zoutianjian/esp/projects/esp-sensairshuttle/software/factory_test_firmware/build/gdbinit/symbols
+source /home/zoutianjian/esp/projects/esp-sensairshuttle/software/factory_test_firmware/build/gdbinit/connect

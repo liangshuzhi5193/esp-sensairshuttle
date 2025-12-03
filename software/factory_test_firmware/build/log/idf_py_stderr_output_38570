@@ -1,0 +1,44 @@
+Command: make -j 22 all
+/home/zoutianjian/esp/projects/esp-hello/components/touch_ic_bs8112a3/touch_ic_bs8112a3.c:135:1: warning: ignoring attribute 'section (".iram1.1")' because it conflicts with previous 'section (".iram1.0")' [-Wattributes]
+  135 | {
+      | ^
+/home/zoutianjian/esp/projects/esp-hello/components/touch_ic_bs8112a3/touch_ic_bs8112a3.c:33:23: note: previous declaration here
+   33 | static void IRAM_ATTR touch_interrupt_handler(void *arg);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/zoutianjian/esp/projects/esp-sensairshuttle/software/factory_test_firmware/managed_components/lvgl__lvgl/src/osal/lv_freertos.c:18:
+/home/zoutianjian/esp/esp-idf-v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/atomic.h:402:34: warning: 'Atomic_XOR_u32' defined but not used [-Wunused-function]
+  402 | static portFORCE_INLINE uint32_t Atomic_XOR_u32( uint32_t volatile * pulDestination,
+      |                                  ^~~~~~~~~~~~~~
+/home/zoutianjian/esp/esp-idf-v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/atomic.h:375:34: warning: 'Atomic_NAND_u32' defined but not used [-Wunused-function]
+  375 | static portFORCE_INLINE uint32_t Atomic_NAND_u32( uint32_t volatile * pulDestination,
+      |                                  ^~~~~~~~~~~~~~~
+/home/zoutianjian/esp/esp-idf-v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/atomic.h:348:34: warning: 'Atomic_AND_u32' defined but not used [-Wunused-function]
+  348 | static portFORCE_INLINE uint32_t Atomic_AND_u32( uint32_t volatile * pulDestination,
+      |                                  ^~~~~~~~~~~~~~
+/home/zoutianjian/esp/esp-idf-v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/atomic.h:321:34: warning: 'Atomic_OR_u32' defined but not used [-Wunused-function]
+  321 | static portFORCE_INLINE uint32_t Atomic_OR_u32( uint32_t volatile * pulDestination,
+      |                                  ^~~~~~~~~~~~~
+/home/zoutianjian/esp/esp-idf-v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/atomic.h:294:34: warning: 'Atomic_Decrement_u32' defined but not used [-Wunused-function]
+  294 | static portFORCE_INLINE uint32_t Atomic_Decrement_u32( uint32_t volatile * pulAddend )
+      |                                  ^~~~~~~~~~~~~~~~~~~~
+/home/zoutianjian/esp/esp-idf-v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/atomic.h:269:34: warning: 'Atomic_Increment_u32' defined but not used [-Wunused-function]
+  269 | static portFORCE_INLINE uint32_t Atomic_Increment_u32( uint32_t volatile * pulAddend )
+      |                                  ^~~~~~~~~~~~~~~~~~~~
+/home/zoutianjian/esp/esp-idf-v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/atomic.h:243:34: warning: 'Atomic_Subtract_u32' defined but not used [-Wunused-function]
+  243 | static portFORCE_INLINE uint32_t Atomic_Subtract_u32( uint32_t volatile * pulAddend,
+      |                                  ^~~~~~~~~~~~~~~~~~~
+/home/zoutianjian/esp/esp-idf-v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/atomic.h:215:34: warning: 'Atomic_Add_u32' defined but not used [-Wunused-function]
+  215 | static portFORCE_INLINE uint32_t Atomic_Add_u32( uint32_t volatile * pulAddend,
+      |                                  ^~~~~~~~~~~~~~
+/home/zoutianjian/esp/esp-idf-v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/atomic.h:182:34: warning: 'Atomic_CompareAndSwapPointers_p32' defined but not used [-Wunused-function]
+  182 | static portFORCE_INLINE uint32_t Atomic_CompareAndSwapPointers_p32( void * volatile * ppvDestination,
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/zoutianjian/esp/esp-idf-v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/atomic.h:150:32: warning: 'Atomic_SwapPointers_p32' defined but not used [-Wunused-function]
+  150 | static portFORCE_INLINE void * Atomic_SwapPointers_p32( void * volatile * ppvDestination,
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+/home/zoutianjian/esp/esp-idf-v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/atomic.h:114:34: warning: 'Atomic_CompareAndSwap_u32' defined but not used [-Wunused-function]
+  114 | static portFORCE_INLINE uint32_t Atomic_CompareAndSwap_u32( uint32_t volatile * pulDestination,
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/zoutianjian/esp/projects/esp-sensairshuttle/software/factory_test_firmware/main/app_main.c:38:31: warning: 'spk_codec_dev' defined but not used [-Wunused-variable]
+   38 | static esp_codec_dev_handle_t spk_codec_dev;
+      |                               ^~~~~~~~~~~~~

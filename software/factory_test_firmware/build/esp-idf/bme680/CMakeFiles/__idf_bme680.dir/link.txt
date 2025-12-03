@@ -1,0 +1,2 @@
+/home/zoutianjian/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20250730/riscv32-esp-elf/bin/riscv32-esp-elf-ar qc libbme680.a CMakeFiles/__idf_bme680.dir/bme680.c.obj
+/home/zoutianjian/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20250730/riscv32-esp-elf/bin/riscv32-esp-elf-ranlib libbme680.a

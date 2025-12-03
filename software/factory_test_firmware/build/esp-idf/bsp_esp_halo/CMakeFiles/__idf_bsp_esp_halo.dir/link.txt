@@ -1,0 +1,2 @@
+/home/zoutianjian/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20250730/riscv32-esp-elf/bin/riscv32-esp-elf-ar qc libbsp_esp_halo.a CMakeFiles/__idf_bsp_esp_halo.dir/bsp_esp_halo.c.obj
+/home/zoutianjian/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20250730/riscv32-esp-elf/bin/riscv32-esp-elf-ranlib libbsp_esp_halo.a
