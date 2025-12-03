@@ -1,63 +1,68 @@
-# ESP-HALO Display Example
+# ESP-SENSAIRSHUTTLE Factory Test Firmware
 
-This example demonstrates the LCD and touch functionality of the ESP-HALO board using the BSP (Board Support Package).
+## 简介
 
-## Features
+这个固件是用于测试 **ESP-SENSAIRSHUTTLE** 板的生产测试固件，基于 **ESP32-C5-WROOM-1** 模组。该产测固件可检测 **ESP-SENSAIRSHUTTLE** 板的多种外设功能，包括 **LCD 显示**、**电容触摸**、**麦克风录音**、**扬声器播放**、**传感器检测**等。
 
-- ILI9341 LCD controller (284x240 resolution)
-- CST816S capacitive touch controller
-- LVGL graphics library integration
-- Touch event handling demonstration
+## 特点
 
-## Hardware Requirements
+- 依托 ILI9341 显示驱动下的 LCD 屏幕显示测试 (分辨率为 284x240 )
+- 采用 CST816S 触控控制芯片的的电容屏触摸测试
+- 集成 LVGL 图形库，用于显示测试界面
+- 提供模拟麦克风接口模块，通过 LMV321IDBVR 实现音频信号放大和 ADC 采集，可测试麦克风录音功能
+- 提供 NS4150B 音频放大模块，用于测试扬声器播放功能
+- 提供 BME680 传感器转接板与 BMI270 + BMM350 传感器转接板接口，可测试传感器功能。
 
-- ESP-HALO board (Open Source or Production version)
-- ILI9341 LCD display
-- CST816S touch panel
+## 硬件需求
 
-## How to Use
+- ESP-SensairShuttle 开发板
+- ILI9341 LCD 显示屏
+- CST816S 电容屏触摸控制器
+- BME680 传感器转接板或 BMI270 + BMM350 传感器转接板
+- 模拟麦克风与扬声器
 
-### Build and Flash
+## 使用说明
+
+### 编译与烧录
 
 ```bash
 idf.py build flash monitor
 ```
 
-### Configuration
+### 产测流程
 
-You can configure the LCD interface type using menuconfig:
+1. 若开发板所有模块均未被测试，则程序将运行完整的产测流程。
+2. **屏幕触控测试**：依次点击位于屏幕不同区域的 **点我** 按钮；若均能正常点击，则屏幕触控功能正常。
+3. **屏幕显示测试**：点击 **开始** 按钮后，程序将依次展示“红-绿-蓝”三个颜色背景，若无明显色差或闪烁，则屏幕显示功能正常。
+4. **扬声器测试**：确保开发板已经接入了**扬声器模块**。点击 **播放** 按钮后（扬声器按钮），程序将播放一段测试音频，若扬声器能够播放声音且音频播放正常（声音清晰可辨、音量正常），则测试通过。
+5. **麦克风测试**：确保开发板已经接入了**麦克风模块**。点击“录音”按钮后，程序将开始3秒的录音。然后，录音的内容将通过扬声器进行播放，如果播放的音频正常（声音清晰可辨、音量正常、播放与录制内容一致），则测试通过。
+6. **BME680 传感器测试**：确保开发板已经接入了 **BME680 传感器转接板**。程序将自动读取 BME680 传感器的环境数据（温度、湿度、气压、气体电阻）。若传感器能够正常读取数据且数据范围正常，则程序将自动判断通过。
+7. **BMI270 + BMM350 传感器测试**：确保开发板已经接入了 **BMI270 + BMM350 传感器转接板**。程序将首先进行传感器的初始化，然后自动读取 BMI270 + BMM350 传感器的数据（三轴加速度数据、三轴陀螺仪数据、三轴地磁传感器数据）。若传感器能够正常读取数据且数据范围正常，则程序将自动判断通过。
+8. 测试完成后，程序将进入测试结果显示界面。该界面将显示所有测试项的测试结果，测试结果将写入 Flash 并可断电保存。点击任意一项测试项将重新测试该项功能。点击“重置”按钮将重置所有测试结果。
 
-```bash
-idf.py menuconfig
-```
+## 引脚配置
 
-Navigate to: `Board Support Package` -> `LCD Interface Type`
-
-- **SPI**: Standard SPI interface (default)
-- **Parallel IO**: Use Parlio to simulate SPI or use parallel mode
-
-### Expected Behavior
-
-1. Display shows "ESP-HALO Display Test - CST816S Touch Enabled" label
-2. A button labeled "Touch Me!" is displayed in the center
-3. Touch counter is displayed at the bottom
-4. Each touch increments the counter and logs the event
-
-## Pin Configuration
-
-### Open Source Board
-- LCD MOSI: GPIO0
-- LCD SCLK: GPIO1
-- LCD CS: GPIO6
-- LCD DC: GPIO7
-- Touch INT: GPIO4
+### I2C
 - I2C SDA: GPIO2
 - I2C SCL: GPIO3
 
-### Production Board
-- LCD MOSI: GPIO23
-- LCD SCLK: GPIO24
+### LCD
 - LCD CS: GPIO25
 - LCD DC: GPIO26
-- I2C SDA: GPIO2
-- I2C SCL: GPIO3
+- LCD SDA: GPIO23
+- LCD SCL: GPIO24
+- LCD TP SDA: GPIO2
+- LCD TP SCL: GPIO3
+
+### Shuttle Board
+- BM CS: GPIO10
+- BM SDO: GPIO9
+- BM G1: GPIO28
+- BM G2: GPIO0
+
+### Audio
+- OPA_OUT: GPIO6
+- PA_CTL: GPIO1
+- PDM_P: GPIO7
+- PDM_N: GPIO8
+
