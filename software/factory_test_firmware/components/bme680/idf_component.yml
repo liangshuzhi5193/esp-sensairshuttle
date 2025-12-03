@@ -1,0 +1,7 @@
+## IDF Component Manager Manifest File
+dependencies:
+  idf: '>=4.4.1'
+
+  BME68x_SensorAPI:
+    version: '>=0.1.0'
+    override_path: ../BME68x_SensorAPI

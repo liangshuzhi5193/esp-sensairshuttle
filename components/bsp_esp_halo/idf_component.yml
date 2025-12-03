@@ -1,0 +1,36 @@
+targets:
+  - esp32c5
+
+tags:
+  - bsp
+
+dependencies:
+  idf: ">=5.0.0"
+
+  espressif/esp_codec_dev:
+    override_path: "../espressif__esp_codec_dev"
+
+  espressif/adc_mic:
+    override_path: "../espressif__adc_mic"
+
+  touch_ic_bs8112a3:
+    path: "../touch_ic_bs8112a3"
+    public: true
+
+  espressif/led_strip: "==2.5.5"
+
+  espressif/button: "==3.5.0"
+
+  espressif/esp_lvgl_port:
+    version: "^2"
+    public: true
+
+  espressif/esp_lcd_ili9341:
+    version: "^1"
+    public: true
+
+  espressif/esp_lcd_touch_cst816s:
+    version: "^1"
+    public: true
+
+

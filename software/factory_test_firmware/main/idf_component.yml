@@ -1,0 +1,8 @@
+description: BSP ESP-HALO Display Example
+
+dependencies:
+  lvgl/lvgl:
+    version: "^9"
+
+  espressif/esp_mmap_assets: "==1.4.0"
+  espressif/button: "==3.5.0"
