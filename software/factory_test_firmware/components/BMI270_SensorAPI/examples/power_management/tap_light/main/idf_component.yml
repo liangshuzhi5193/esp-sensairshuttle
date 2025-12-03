@@ -1,0 +1,7 @@
+## IDF Component Manager Manifest File
+dependencies:
+  espressif/i2c_bus: "*"
+  idf: '>=5.0'
+  BMI270_SensorAPI_espressif2022:
+    version: "*"
+    override_path: "../../../.."
