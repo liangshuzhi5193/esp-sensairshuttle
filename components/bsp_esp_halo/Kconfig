@@ -1,0 +1,91 @@
+menu "Board Support Package"
+
+    config BSP_ERROR_CHECK
+        bool "Enable error check in BSP"
+        default y
+        help
+            Error check assert the application before returning the error code.
+
+    choice BSP_LCD_INTERFACE
+        prompt "LCD Interface Type"
+        default BSP_LCD_INTERFACE_SPI
+        help
+            Select LCD interface type.
+
+        config BSP_LCD_INTERFACE_SPI
+            bool "SPI"
+            help
+                Use SPI interface for LCD.
+
+        config BSP_LCD_INTERFACE_PARLIO
+            bool "Parallel IO"
+            help
+                Use Parallel IO interface for LCD (simulate SPI or parallel).
+    endchoice
+
+    config BSP_LCD_PARLIO_DATA_WIDTH
+        int "Parallel IO data width"
+        depends on BSP_LCD_INTERFACE_PARLIO
+        default 1
+        range 1 8
+        help
+            Data width for Parallel IO. 1 = simulate SPI, 8 = 8-bit parallel.
+
+    menu "I2C"
+        config BSP_I2C_NUM
+            int "I2C peripheral index"
+            default 0
+            range 0 1
+            help
+                I2C peripheral index.
+
+        config BSP_I2C_FAST_MODE
+            bool "Enable I2C fast mode"
+            default y
+            help
+                I2C has two speed modes: normal (100kHz) and fast (400kHz).
+
+        config BSP_I2C_CLK_SPEED_HZ
+            int
+            default 400000 if BSP_I2C_FAST_MODE
+            default 100000
+    endmenu
+
+    menu "Display"
+        config BSP_DISPLAY_LVGL_TASK_PRIORITY
+            int "LVGL task priority"
+            default 2
+            help
+                The Board Support Package will create a task that will periodically handle LVGL operation in lv_timer_handler().
+
+        config BSP_DISPLAY_LVGL_TICK
+            int "LVGL tick period"
+            default 5
+            range 1 100
+            help
+                Period of LVGL tick timer.
+
+        config BSP_DISPLAY_LVGL_MAX_SLEEP
+            int "LVGL maximum sleep time in ms"
+            default 500
+            range 1 1000
+            help
+                Maximum time for task sleep in ms.
+        
+        config BSP_DISPLAY_LVGL_BUFFER_IN_PSRAM
+            bool "Allocate LVGL buffer in PSRAM"
+            default n
+            help
+                LVGL buffer will be allocated in PSRAM instead of internal RAM with DMA.
+
+        config BSP_DISPLAY_BRIGHTNESS_LEDC_CH
+            int "LEDC channel index"
+            default 1
+            range 0 7
+            help
+                LEDC channel is used to generate PWM signal that controls display brightness.
+                Set LEDC index that should be used.
+    endmenu
+
+endmenu
+
