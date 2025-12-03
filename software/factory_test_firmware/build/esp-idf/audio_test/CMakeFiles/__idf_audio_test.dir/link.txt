@@ -1,2 +1,0 @@
-/home/zoutianjian/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20250730/riscv32-esp-elf/bin/riscv32-esp-elf-ar qc libaudio_test.a CMakeFiles/__idf_audio_test.dir/audio_test.c.obj
-/home/zoutianjian/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20250730/riscv32-esp-elf/bin/riscv32-esp-elf-ranlib libaudio_test.a

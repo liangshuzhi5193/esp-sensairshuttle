@@ -1,2 +1,0 @@
-/home/zoutianjian/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20250730/riscv32-esp-elf/bin/riscv32-esp-elf-ar qc libhal.a CMakeFiles/__idf_hal.dir/hal_utils.c.obj CMakeFiles/__idf_hal.dir/efuse_hal.c.obj CMakeFiles/__idf_hal.dir/esp32c5/efuse_hal.c.obj CMakeFiles/__idf_hal.dir/lp_timer_hal.c.obj CMakeFiles/__idf_hal.dir/key_mgr_hal.c.obj CMakeFiles/__idf_hal.dir/huk_hal.c.obj CMakeFiles/__idf_hal.dir/mmu_hal.c.obj CMakeFiles/__idf_hal.dir/cache_hal.c.obj
-/home/zoutianjian/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20250730/riscv32-esp-elf/bin/riscv32-esp-elf-ranlib libhal.a
