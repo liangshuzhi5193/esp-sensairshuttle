@@ -1,4 +1,4 @@
-# ESP-SENSAIRSHUTTLE Factory Test Firmware
+# ESP-SensairShuttle Factory Test Firmware
 
 ## 简介
 
