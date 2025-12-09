@@ -1,0 +1,7 @@
+## IDF Component Manager Manifest File
+dependencies:
+  idf: '>=5.0'
+  espressif/i2c_bus: "*"
+  BMM350_SensorAPI:
+    path: ../BMM350_SensorAPI
+  espressif2022/bmi270: "*"

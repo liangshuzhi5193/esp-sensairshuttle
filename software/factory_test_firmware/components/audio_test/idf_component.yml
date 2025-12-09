@@ -1,0 +1,6 @@
+description: BSP Display example
+
+dependencies:
+  espressif/esp_mmap_assets: "*"
+  espressif/button: "*"
+
